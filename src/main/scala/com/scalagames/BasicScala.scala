@@ -18,6 +18,9 @@ object BasicScala {
     convertType
     testMethodWithDefaultParameters
     `java last parameter 3 dots method`(1,2,3,4)
+    val classWithOneParameterMethod = new ClassWithOneParameterMethod
+    classWithOneParameterMethod oneParameterMethod 1
+    LikeJavaMethodsInClass.staticMethod
   }
 
   def return_value_method(): Int ={
@@ -88,6 +91,22 @@ object BasicScala {
 
   class ClassWithDefaultMember{
     var member : Int = _
+  }
+
+  class ClassWithOneParameterMethod {
+
+    def oneParameterMethod(x: Int): Unit = {
+      val expected_true = x + 1 == x.+(1)
+      println(expected_true)
+    }
+  }
+
+  object LikeJavaMethodsInClass {
+
+    def staticMethod: Unit = {
+      println("staticMethod")
+    }
+
   }
 
 }
