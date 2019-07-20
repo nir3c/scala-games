@@ -47,7 +47,7 @@ object BasicScala {
     val equalsByValue = new EqualityExample == new EqualityExample
     println(s"equals by value: $equalsByValue")
     val equalsByReference = new EqualityExample eq new EqualityExample
-    println(s"equals by reference: $equalsByReference")
+    println(s"not equals by reference: $equalsByReference")
   }
 
   def convertType(): Unit = {
@@ -73,7 +73,7 @@ object BasicScala {
     x.foreach(n => println(n))
   }
 
-  class EqualityExample
+  case class EqualityExample()
 
   class OverrideExample {
     override def toString = "to string OverrideExample"
